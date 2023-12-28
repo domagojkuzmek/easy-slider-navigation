@@ -1,0 +1,152 @@
+:root {
+  --primaryColor: #fff;
+  --navColor1: #21292c;
+  --navColor2: #aa3e39;
+  --navColor3: #aa6e39;
+  --navColor4: #236267;
+  --navColor5: #2c8437;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+section + :not(:first-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#home {
+  background-image: url("/wallpaper.jpg");
+}
+section#home a {
+  display: inline-block;
+  margin-block-start: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+  border-bottom: 2px solid white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+section#about {
+  background-color: var(--navColor2);
+}
+section#skills {
+  background-color: var(--navColor3);
+}
+section#projects {
+  background-color: var(--navColor4);
+}
+section#contact {
+  background-color: var(--navColor5);
+}
+
+h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.356);
+  transform: translateX(-100vw);
+}
+
+.overlay-show {
+  transform: translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.overlay-close {
+  transform: translateX(-100vw);
+  transition: all 0.4s ease-in-out;
+}
+
+nav {
+  height: 100%;
+}
+nav ul {
+  height: 100%;
+}
+nav ul li {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+nav ul li:nth-child(1) {
+  background-color: var(--navColor1);
+}
+nav ul li:nth-child(2) {
+  background-color: var(--navColor2);
+}
+nav ul li:nth-child(3) {
+  background-color: var(--navColor3);
+}
+nav ul li:nth-child(4) {
+  background-color: var(--navColor4);
+}
+nav ul li:nth-child(5) {
+  background-color: var(--navColor5);
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  transition: all 0.4s ease-in-out;
+}
+nav ul li a::before {
+  content: "";
+  width: 25vw;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+nav ul li a:hover::before {
+  /* border-bottom: 1px solid white;
+  position: relative;
+  bottom: 3px; */
+  opacity: 1;
+}
+nav ul li #close-btn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+#hamburger {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
